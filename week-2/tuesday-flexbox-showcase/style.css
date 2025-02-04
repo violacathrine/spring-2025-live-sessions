@@ -1,0 +1,53 @@
+body {
+  background: #CDFFE2;
+  color: #0025FF;
+  font-family: "Figtree", serif;
+}
+
+section {
+  padding: 20px;
+}
+
+hr {
+  border: 1px solid #0025FF;
+}
+
+.flex-container div {
+  background: lightpink;
+  padding: 30px;
+  border: 2px solid hotpink;
+}
+
+.flex-container {
+  display: flex;
+  border: 2px solid blue;
+}
+
+.column-container {
+  flex-direction: column;
+}
+
+.flex-wrap-container {
+  flex-wrap: wrap;
+}
+
+.justify-content-container {
+  justify-content: center;
+}
+
+.align-items-container {
+  align-items: center;
+  height: 200px;
+}
+
+.gap-container {
+  gap: 20px;
+}
+
+.flex-property-container .default-card {
+  flex: 1;
+}
+
+.flex-property-container .bigger-card {
+  flex: 2;
+}
