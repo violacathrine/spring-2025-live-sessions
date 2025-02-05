@@ -1,0 +1,34 @@
+body {
+  background: wheat;
+}
+
+.grid-container {
+  display: grid;
+  /* grid-template-columns: repeat(4, 1fr); */
+  /* grid-template-columns: repeat(auto-fit, 200px); */
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 20px;
+}
+
+article {
+  background: white;
+  padding: 20px;
+  border: 2px solid goldenrod;
+  display: flex;
+  flex-direction: column;
+  /* height: 250px; */
+  gap: 30px;
+  align-items: center;
+
+  /* grid-column: span 4; */
+}
+
+img {
+  width: 100px;
+}
+
+/* @media (min-width: 600px) {
+  .grid-container {
+    grid-template-columns: repeat(8, 1fr);
+  }
+} */
