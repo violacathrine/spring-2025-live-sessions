@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0"
+  >
+  <link
+    rel="stylesheet"
+    href="./style.css"
+  >
+  <link
+    rel="preconnect"
+    href="https://fonts.googleapis.com"
+  >
+  <link
+    rel="preconnect"
+    href="https://fonts.gstatic.com"
+    crossorigin
+  >
+  <link
+    href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+    rel="stylesheet"
+  >
+  <title>Codealong Tuesday</title>
+</head>
+
+<body>
+  <header>
+    <h1>Cinema</h1>
+    <h2>movie · movie · movie</h2>
+  </header>
+
+  <form
+    action="http://httpbin.org/anything"
+    method="POST"
+  >
+    <div class="form-input">
+      <label for="email">Email</label>
+      <input
+        type="email"
+        id="email"
+        name="email"
+        placeholder="example@email.com"
+        required
+      />
+    </div>
+
+    <div class="form-input">
+      <label for="movie">Choose a movie</label>
+      <select
+        name="movie"
+        id="movie"
+      >
+        <option value="paddington">Paddington in Peru</option>
+        <option value="mufasa">Mufasa</option>
+        <option value="moana">Moana 2</option>
+      </select>
+    </div>
+
+    <div class="form-input">
+      <label for="amount">Number of tickets</label>
+      <input
+        type="number"
+        id="amount"
+        name="amount"
+        value="1"
+        min="1"
+        max="10"
+      />
+    </div>
+    <button type="submit">Buy tickets</button>
+  </form>
+</body>
+
+</html>

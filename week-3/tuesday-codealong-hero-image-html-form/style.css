@@ -1,0 +1,19 @@
+body {
+  background: #131313;
+  color: white;
+  font-family: "Montserrat";
+  margin: 0;
+}
+
+header {
+  background-image: linear-gradient(rgba(255, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("./cinema.jpg");
+  /* background-image: url("./cinema.jpg"); */
+  height: 50vh;
+  background-size: cover;
+  background-position: center;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
