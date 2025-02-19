@@ -1,0 +1,76 @@
+body {
+  background: #CDFFE2;
+  color: #0025FF;
+  font-family: "Figtree", serif;
+}
+
+.container {
+  border-bottom: 2px solid #FF4575;
+}
+
+h3 {
+  font-size: 22px;
+  font-weight: 400;
+  cursor: pointer;
+}
+
+p {
+  font-size: 18px;
+  font-weight: 200;
+}
+
+.answer {
+  display: none;
+}
+
+.open + .answer {
+  display: flex;
+}
+
+/*Disco ball starter code*/
+.disco-ball {
+  display: block;
+  max-width: 220px;
+  margin: 30px auto;
+  cursor: pointer;
+}
+
+.disco-time {
+  animation: disco 3s linear infinite;
+}
+
+@keyframes disco {
+  0% {
+    background: firebrick;
+  }
+  10% {
+    background: orange;
+  }
+  20% {
+    background: purple;
+  }
+  30% {
+    background: #336699;
+  }
+  40% {
+    background: #5218fa;
+  }
+  50% {
+    background: #ff6262;
+  }
+  60% {
+    background: #c8a2c8;
+  }
+  70% {
+    background: #25ee08;
+  }
+  80% {
+    background: #39ff14;
+  }
+  90% {
+    background: #7ea392;
+  }
+  100% {
+    background: #da06ed;
+  }
+}
