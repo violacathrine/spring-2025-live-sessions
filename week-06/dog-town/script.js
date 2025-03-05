@@ -44,8 +44,11 @@ const DOGS = [
 ]
 
 const container = document.getElementById('container')
+const btn = document.getElementById('btn')
 
 const loadDogs = (dogsArray) => {
+  container.innerHTML = '' //resets the container before we load the dogs
+
   dogsArray.forEach(dog => {
     container.innerHTML += `<div class="card">
       <p>${dog.name}</p>
@@ -56,4 +59,12 @@ const loadDogs = (dogsArray) => {
   })
 }
 
+const filterDogs = () => {
+  const filteredArray = DOGS.filter(dog => dog.fur === 'black')
+  console.log('These are my black dogs:', filteredArray)
+  loadDogs(filteredArray)
+}
+
 loadDogs(DOGS)
+
+btn.addEventListener('click', filterDogs)
