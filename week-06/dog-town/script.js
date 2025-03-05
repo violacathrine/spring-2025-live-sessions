@@ -2,19 +2,19 @@ const DOGS = [
   {
     name: 'Alfons',
     img: 'assets/dog1.jpg',
-    fur: 'brown',
+    fur: 'Brown',
     puppy: false
   },
   {
     name: 'Bingo',
     img: 'assets/dog2.jpg',
-    fur: 'brown',
+    fur: 'Brown',
     puppy: false,
   },
   {
     name: 'Cecilia',
     img: 'assets/dog3.jpg',
-    fur: 'mixed',
+    fur: 'miXed',
     puppy: true,
   },
   {
@@ -44,7 +44,9 @@ const DOGS = [
 ]
 
 const container = document.getElementById('container')
-const btn = document.getElementById('btn')
+const brownBtn = document.getElementById('brown-btn')
+const blackBtn = document.getElementById('black-btn')
+const filterDropdown = document.getElementById('filterDropdown')
 
 const loadDogs = (dogsArray) => {
   container.innerHTML = '' //resets the container before we load the dogs
@@ -60,11 +62,19 @@ const loadDogs = (dogsArray) => {
 }
 
 const filterDogs = () => {
-  const filteredArray = DOGS.filter(dog => dog.fur === 'black')
-  console.log('These are my black dogs:', filteredArray)
-  loadDogs(filteredArray)
+  const filterValue = filterDropdown.value
+
+  if (filterValue === 'all') {
+    loadDogs(DOGS)
+  } else {
+    const filteredArray = DOGS.filter(dog => dog.fur.toLowerCase() === filterValue.toLowerCase())
+    loadDogs(filteredArray)
+  }
+
 }
 
 loadDogs(DOGS)
 
-btn.addEventListener('click', filterDogs)
+// brownBtn.addEventListener('click', () => filterDogs('brown'))
+// blackBtn.addEventListener('click', () => filterDogs('black'))
+filterDropdown.addEventListener('change', filterDogs)
